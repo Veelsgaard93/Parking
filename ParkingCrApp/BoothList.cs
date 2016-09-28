@@ -9,6 +9,7 @@ namespace ParkingCrApp
     class BoothList
     {
         public static List<Booth> Booths;
+
         public BoothList()
         {
             Booths = new List<Booth>();

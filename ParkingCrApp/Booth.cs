@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace ParkingCrApp
 {
-    class ModelClass
+    class Booth
     {
         public int nummer { get; set; }
-        public int parkeringsplads { get; set; }
+        public string parkeringsplads { get; set; }
+        public int Id { get; set; }
+
     }
 }

@@ -20,5 +20,9 @@ namespace ParkingCrApp
             Parkeringsplads = parkeringsplads;
         }
 
+        public override string ToString()
+        {
+            return $"{nameof(Id)}: {Id}, {nameof(Nummer)}: {Nummer}, {nameof(Parkeringsplads)}: {Parkeringsplads}";
+        }
     }
 }

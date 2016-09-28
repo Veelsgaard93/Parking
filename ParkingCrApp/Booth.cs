@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ParkingCrApp
 {
-    class Booth
+    public class Booth
     {
         public int Id { get; set; }
         public int Nummer { get; set; }

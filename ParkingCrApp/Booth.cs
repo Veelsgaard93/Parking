@@ -8,9 +8,17 @@ namespace ParkingCrApp
 {
     class Booth
     {
-        public int nummer { get; set; }
-        public string parkeringsplads { get; set; }
         public int Id { get; set; }
+        public int Nummer { get; set; }
+        public string Parkeringsplads { get; set; }
+
+        
+        public Booth(int id, int nummer, string parkeringsplads)
+        {
+            Id = id;
+            Nummer = nummer;
+            Parkeringsplads = parkeringsplads;
+        }
 
     }
 }

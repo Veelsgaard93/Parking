@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ParkingCrApp
 {
-    class Booth
+    public class Booth
     {
         public int Id { get; set; }
         public int Nummer { get; set; }
@@ -20,5 +20,9 @@ namespace ParkingCrApp
             Parkeringsplads = parkeringsplads;
         }
 
+        public override string ToString()
+        {
+            return $"{nameof(Id)}: {Id}, {nameof(Nummer)}: {Nummer}, {nameof(Parkeringsplads)}: {Parkeringsplads}";
+        }
     }
 }

@@ -59,6 +59,12 @@ namespace ParkingCrApp
             //}
         }
 
+        /// <summary>
+        /// Moves a booth from the 'available' list to the 'InUse' list.
+        /// takes a booth as parameter.
+        /// </summary>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public bool TakeBooth(Booth b)
         {
             if (BoothsAvailable.All(booth => booth != b)) return false;
@@ -67,6 +73,12 @@ namespace ParkingCrApp
             return true;
         }
 
+        /// <summary>
+        /// Moves a booth from 'InUse' list to 'Available' list.
+        /// Takes a booth as parameter.
+        /// </summary>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public bool ReleaseBooth(Booth b)
         {
             if (BoothsInUse.All(booth => booth != b)) return false;

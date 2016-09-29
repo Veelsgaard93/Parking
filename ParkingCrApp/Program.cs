@@ -10,7 +10,10 @@ namespace ParkingCrApp
     {
         static void Main(string[] args)
         {
+            
+            Dictionary<string, int> dictionaryDic = new Dictionary<string, int>();
 
+            dictionaryDic.Add("Car", 1);
         }
     }
 }

@@ -9,22 +9,17 @@ namespace ParkingCrApp
     public class Booth
     {
         public int Id { get; set; }
-        public int Nummer { get; set; }
-        public string Parkeringsplads { get; set; }
-        public bool InUse { get; set; }
-
+        public int Number { get; set; }
         
-        public Booth(int id, int nummer, string parkeringsplads, bool inuse)
+        public Booth(int id, int number)
         {
             Id = id;
-            Nummer = nummer;
-            Parkeringsplads = parkeringsplads;
-            InUse = inuse;
+            Number = number;
         }
 
         public override string ToString()
         {
-            return $"{nameof(Id)}: {Id}, {nameof(Nummer)}: {Nummer}, {nameof(Parkeringsplads)}: {Parkeringsplads}, {nameof(InUse)}: {InUse}";
+            return $"Id: {Id}, Number: {Number}";
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ParkingCrApp
 {
+    // DEPRECATED
     class BoothList
     {
         public static List<Booth> Booths;
@@ -14,6 +15,7 @@ namespace ParkingCrApp
         {
             Booths = new List<Booth>();
         }
+
         /// <summary>
         /// Add's a booth to the booth list
         /// Takes a booth obj as parameter

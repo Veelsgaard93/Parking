@@ -8,46 +8,44 @@ namespace ParkingCrApp
 {
     class Customer
     {
-        public static Dictionary<Booth, int> Preferences;
-        public static Dictionary<Customer, string> Notifaction;
+        public int CustomerId { get; private set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Address { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
 
+        private List<CustomerPreference> Preferences;
+        //public static Dictionary<Customer, string> Notifaction;
         
-        public Customer()
+        public Customer(int customerId, string firstName, string lastName, string address, string email, string phone)
         {
-            Preferences = new Dictionary<Booth, int>();
-            Notifaction = new Dictionary<Customer, string>();
+            CustomerId = customerId;
+            FirstName = firstName;
+            LastName = lastName;
+            Address = address;
+            Email = email;
+            Phone = phone;
+            Preferences=new List<CustomerPreference>();
         }
 
-        /// <summary>
-        /// Adds a booth to the prefrences dictionary
-        /// </summary>
-        /// <param name="booth"></param>
-        public void Add(Booth booth)
+        public void AddPreference(ParkingLot p, Booth b)
         {
-            Preferences.Add(booth, booth.Id);
-        }
-        /// <summary>
-        /// Removes the first matching instance from the dictionary
-        /// </summary>
-        /// <param name="id"></param>
-        public void Delete(int id)
-        {
-            var item = Preferences.First(kvp => kvp.Value == id);
-
-            Preferences.Remove(item.Key);
-        }
-        /// <summary>
-        /// Displays all booths in preferences
-        /// </summary>
-        public void Display()
-        {
-            foreach (var booth in Preferences) Console.WriteLine(booth.ToString());  
+            Preferences.Add(new CustomerPreference(p,b));
         }
 
-        
+        public bool DeletePreference(ParkingLot p, Booth b)
+        {
+            if (!Preferences.Any(cp => cp.parkingLot == p && cp.booth == b)) return false;
+            Preferences.Remove(new CustomerPreference(p, b));
+            return false;
+        }
+
+        public void DisplayPreference()
+        {
+
+        }
     }
-
- 
 }
 
 

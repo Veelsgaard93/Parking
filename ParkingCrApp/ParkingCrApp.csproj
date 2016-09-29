@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Booth.cs" />
     <Compile Include="BoothList.cs" />
+    <Compile Include="Customer.cs" />
     <Compile Include="ParkingLot.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

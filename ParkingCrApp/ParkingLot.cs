@@ -46,17 +46,11 @@ namespace ParkingCrApp
         /// Takes an int (the index in the list) as parameter
         /// </summary>
         /// <param name="id"></param>
-        public void DeleteBooth(int id)
+        public bool DeleteBooth(int id)
         {
-            if (BoothsMaster.Any(booth => booth.Id != id)) return;
+            if (BoothsMaster.Any(booth => booth.Id != id)) return false;
             BoothsMaster.RemoveAt(id);
-            //foreach (var booth in BoothsMaster)
-            //{
-            //    if (booth.Id == id)
-            //    {
-                    
-            //    }
-            //}
+            return true;
         }
 
         /// <summary>

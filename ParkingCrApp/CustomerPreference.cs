@@ -11,11 +11,6 @@ namespace ParkingCrApp
         public ParkingLot parkingLot { get; set; }
         public Booth booth { get; set; }
 
-        public CustomerPreference()
-        {
-            
-        }
-
         public CustomerPreference(ParkingLot parkingLot, Booth booth)
         {
             this.parkingLot = parkingLot;
